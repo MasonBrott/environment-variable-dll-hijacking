@@ -8,3 +8,5 @@ dll-attempts contains a .def file that creates the exports of the targeted dll t
 Get-Hijackable tests almost all executable in the c:\windows\system32 directory to see if they are vulnerable to this kind of DLL hijacking.
 
 Change-Environment changes the SYSTEMROOT environment variable for one specific process to point to your own c:\"something"\system32\ directory.
+
+dll_generator takes legitimate DLLs from the input folder and uses mingw functionality to get export functions and resources to make .def and .res files. It then compiles a new DLL based on those files and a template .c file you can use for hijacking.
