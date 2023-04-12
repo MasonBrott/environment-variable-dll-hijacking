@@ -1,5 +1,5 @@
-#include <Windows.h>
-#include <Shlobj.h>
+#include <windows.h>
+#include <shlobj.h>
 #include <stdio.h>
 #include <wchar.h>
 
