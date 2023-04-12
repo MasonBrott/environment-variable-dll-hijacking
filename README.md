@@ -6,6 +6,7 @@ Windows box should have Change-environment and Get-Hijackable along with the new
 Linux box (tested on Ubuntu) should have a file structure of
 - Project (or whatever you want)
   - dll_generator.sh  dll_template.c input  output
+
 input folder will contain a copy of the legitimate dll you want to hijack
 output will have the .def, .res, and compiled .dll file to copy to the windows box
 
