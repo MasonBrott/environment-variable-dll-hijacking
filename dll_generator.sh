@@ -23,7 +23,7 @@ do
     timeout 10s x86_64-w64-mingw32-windres -i "$dll" -O coff -o "$output_folder/$dll.res" 2> /dev/null
     if [ $? -eq 0 ]; then
         # Compile the new DLL (.c template, .def file, and .res file)
-        x86_64-w64-mingw32-gcc -shared -mwindows -o "$output_folder/$dll" "$output_folder/$dll.def" "$output_folder/$dll.res" ../new_temp.c
+        x86_64-w64-mingw32-gcc -shared -mwindows -o "$output_folder/$dll" "$output_folder/$dll.def" "$output_folder/$dll.res" ../dll_template.c
         # Get rid of the non DLL files
         rm "$output_folder/$dll.def" "$output_folder/$dll.res";
     else
