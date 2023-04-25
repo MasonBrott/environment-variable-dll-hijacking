@@ -1,5 +1,6 @@
 # environment-variable-dll-hijacking
-Project base on the work of @Wietze on twitter utilizing process level environment variables to have a malicious DLL loaded by a trusted process.
+Project base on the work of @Wietze utilizing process level environment variables to have a malicious DLL loaded by a trusted process.
+This project aims to recreate his work and add a few ways of detecting the behavior including a powershell script and a Sigma rule.
 
 Windows box should have Change-environment and Get-Hijackable along with the new .dll that is output from dll_generator.
 
