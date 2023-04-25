@@ -1,0 +1,20 @@
+
+title: DLL Loaded From Non C:\Windows\System32 directory
+status: experimental
+description: Detects process calling a Dll from a directory other than C:\Windows\System32
+author: Alicia Harman
+date: 2023/04/24
+logsource:
+    category: image_load
+    product: windows
+detection:
+    selection:
+        ImageLoaded|contains:
+            - '\System32\'
+        ImageLoaded|endswith:
+            - '.dll'
+    filter:
+        ImageLoaded|startswith:
+            - 'C:\Windows\System32\'
+    condition: selection AND NOT filter
+level: high
