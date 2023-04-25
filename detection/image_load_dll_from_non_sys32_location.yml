@@ -9,6 +9,8 @@ logsource:
     product: windows
 detection:
     selection:
+        Image|startswith:
+            - 'C:\Windows\System32'
         ImageLoaded|contains:
             - '\System32\'
         ImageLoaded|endswith:
